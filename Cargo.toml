@@ -7,5 +7,5 @@ edition = "2021"
 glium = "0.36.0"
 
 imgui = "0.12.0"
-imgui-winit-support = { path = "imgui-winit-support" }
-imgui-glium-renderer = { path = "imgui-glium-renderer" }
+imgui-winit-support = { path = "imgui-winit-support", version = "0.13.0" }
+imgui-glium-renderer = { path = "imgui-glium-renderer", version = "0.13.0" }
