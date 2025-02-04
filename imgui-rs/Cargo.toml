@@ -1,0 +1,5 @@
+[workspace]
+members = ["imgui", "imgui-sys", "xtask"]
+
+package.rust-version = "1.82"
+resolver = "2"

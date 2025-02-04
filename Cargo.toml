@@ -1,0 +1,10 @@
+[package]
+name = "imgui_support"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+glium = "0.36.0"
+imgui = { path = "imgui-rs" }
+imgui-glium-renderer = { path = "imgui-glium-renderer" }
+imgui-winit-support = { path = "imgui-winit-support" }
