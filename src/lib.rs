@@ -6,7 +6,7 @@ use std::time::Duration;
 use glium::{
     glutin::surface::WindowSurface,
     winit::{event::WindowEvent, window::Window},
-    Display, Surface,
+    Display,
 };
 use imgui::{FontConfig, FontGlyphRanges, FontSource, Ui};
 use imgui_winit_support::HiDpiMode;
@@ -29,21 +29,6 @@ pub struct ImGui {
 }
 
 impl ImGui {
-    /// Run before getting the ui
-    pub fn prepare_ui(&mut self, window: &Window) -> Result<(), ExternalError> {
-        self.platform.prepare_frame(self.context.io_mut(), window)
-    }
-    pub fn get_ui(&mut self) -> &mut Ui {
-        self.context.frame()
-    }
-    /// Run before rendering
-    pub fn prepare_render(&mut self, ui: &Ui, window: &Window) {
-        self.platform.prepare_render(ui, window);
-    }
-    pub fn render(&mut self, renderer: &mut impl Surface) -> Result<(), RendererError> {
-        let draw_data = self.context.render();
-        self.renderer.render(renderer, draw_data)
-    }
     /// Pass the engine's delta time into this function
     pub fn update_dt(&mut self, dt: f32) {
         self.context
