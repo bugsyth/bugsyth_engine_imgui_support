@@ -4,8 +4,16 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+winit = { version = "0.30", default-features = false }
 glium = "0.36.0"
 
 imgui = "0.12.0"
-imgui-winit-support = { path = "imgui-winit-support", version = "0.13.0" }
-imgui-glium-renderer = { path = "imgui-glium-renderer", version = "0.13.0" }
+
+[dev-dependencies]
+glium = { version = "0.36.0", default-features = false, features = [
+    "glutin_backend",
+] }
+glutin = "0.32"
+glutin-winit = "0.5.0"
+winit = { version = "0.30", features = ["rwh_06"] }
+raw-window-handle = "0.6.0"

@@ -1,3 +1,6 @@
+mod imgui_glium_renderer;
+mod imgui_winit_support;
+
 use std::time::Duration;
 
 use glium::{
