@@ -8,7 +8,7 @@ use glium::{
     winit::{event::WindowEvent, window::Window},
     Display,
 };
-use imgui::{FontConfig, FontGlyphRanges, FontSource, Ui};
+use imgui::{FontConfig, FontGlyphRanges, FontSource};
 use imgui_winit_support::HiDpiMode;
 
 pub use {
