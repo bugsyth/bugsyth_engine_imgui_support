@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 glium = "0.36.0"
-imgui = { path = "imgui-rs" }
-imgui-glium-renderer = { path = "imgui-glium-renderer" }
+
+imgui = "0.12.0"
 imgui-winit-support = { path = "imgui-winit-support" }
+imgui-glium-renderer = { path = "imgui-glium-renderer" }

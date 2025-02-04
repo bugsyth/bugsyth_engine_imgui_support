@@ -1,4 +1,6 @@
+#![doc = include_str!("../README.md")]
 #![deny(rust_2018_idioms)]
+#![deny(missing_docs)]
 
 use imgui::{self, BackendFlags, ConfigFlags, Context, Io, Key, Ui};
 use std::cmp::Ordering;
@@ -156,7 +158,7 @@ impl WinitPlatform {
         }
     }
 
-    /// Handles a window evnet.
+    /// Handles a window event.
     ///
     /// This function performs the following actions (depends on the event):
     ///

@@ -11,10 +11,10 @@ categories = ["gui", "rendering"]
 
 [dependencies]
 glium = { version = "0.36.0", default-features = false }
-imgui = { git = "https://github.com/imgui-rs/imgui-rs", version = "0.12.0" }
+imgui = "0.12.0"
 
 [dev-dependencies]
-glium = { version = "0.36.0", default-features = false, features = [
+glium = { version = "0.35.0", default-features = false, features = [
     "glutin_backend",
 ] }
 imgui-winit-support = { version = "0.13", git = "https://github.com/imgui-rs/imgui-winit-support" }
