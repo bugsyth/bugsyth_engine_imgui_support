@@ -3,7 +3,7 @@ mod imgui_winit_support;
 
 use std::time::Duration;
 
-use glium::{
+use bugsyth_engine::glium::{
     glutin::surface::WindowSurface,
     winit::{event::WindowEvent, window::Window},
     Display,

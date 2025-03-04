@@ -1,11 +1,13 @@
-use glium::backend::{Context, Facade};
-use glium::index::{self, PrimitiveType};
-use glium::program::ProgramChooserCreationError;
-use glium::texture::{ClientFormat, MipmapsOption, RawImage2d, TextureCreationError};
-use glium::uniforms::{
+use bugsyth_engine::glium::backend::{Context, Facade};
+use bugsyth_engine::glium::index::{self, PrimitiveType};
+use bugsyth_engine::glium::program::ProgramChooserCreationError;
+use bugsyth_engine::glium::texture::{
+    ClientFormat, MipmapsOption, RawImage2d, TextureCreationError,
+};
+use bugsyth_engine::glium::uniforms::{
     MagnifySamplerFilter, MinifySamplerFilter, Sampler, SamplerBehavior, SamplerWrapFunction,
 };
-use glium::{
+use bugsyth_engine::glium::{
     program, uniform, vertex, Blend, BlendingFunction, DrawError, DrawParameters, IndexBuffer,
     LinearBlendingFactor, Program, Rect, Surface, Texture2d, VertexBuffer,
 };
@@ -106,30 +108,30 @@ pub struct GliumDrawVert {
 }
 
 // manual impl to avoid an allocation, and to reduce macro wonkiness.
-impl glium::vertex::Vertex for GliumDrawVert {
+impl bugsyth_engine::glium::vertex::Vertex for GliumDrawVert {
     #[inline]
-    fn build_bindings() -> glium::vertex::VertexFormat {
+    fn build_bindings() -> bugsyth_engine::glium::vertex::VertexFormat {
         use std::borrow::Cow::*;
         &[
             (
                 Borrowed("pos"),
                 0,
                 -1,
-                glium::vertex::AttributeType::F32F32,
+                bugsyth_engine::glium::vertex::AttributeType::F32F32,
                 false,
             ),
             (
                 Borrowed("uv"),
                 8,
                 -1,
-                glium::vertex::AttributeType::F32F32,
+                bugsyth_engine::glium::vertex::AttributeType::F32F32,
                 false,
             ),
             (
                 Borrowed("col"),
                 16,
                 -1,
-                glium::vertex::AttributeType::U8U8U8U8,
+                bugsyth_engine::glium::vertex::AttributeType::U8U8U8U8,
                 false,
             ),
         ]
