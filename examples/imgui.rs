@@ -85,6 +85,7 @@ impl GameState for Game {
     }
     fn draw(&mut self, ctx: &mut Context, renderer: &mut impl Renderer) {
         renderer.clear_color(0.0, 0.0, 0.0, 1.0);
+        let mat: [[f32; 4]; 4] = Mat4::translation_3d(self.pos).into_col_arrays();
         renderer
             .draw(
                 ctx,
@@ -92,7 +93,7 @@ impl GameState for Game {
                 &uniform! {
                     persp: ctx.camera.get_perspective(),
                     view: ctx.camera.get_view(),
-                    matrix: math_helper::mat4_as_array(Mat4::translation_3d(self.pos)),
+                    matrix: mat,
                 },
             )
             .unwrap();
