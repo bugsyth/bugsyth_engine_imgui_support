@@ -1,13 +1,13 @@
 [package]
 name = "bugsyth_engine_imgui_support"
-version = "0.4.0"
+version = "0.4.1"
 edition = "2021"
 repository = "https://github.com/bugsyth/bugsyth_engine_imgui_support"
 license = "MIT OR Apache-2.0"
 description = "imgui support for Bugsyth Engine"
 
 [dependencies]
-bugsyth_engine = "0.4.0"
+bugsyth_engine = "0.6.0"
 winit = { version = "0.30.9", default-features = false }
 
 imgui = "0.12.0"
